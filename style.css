@@ -1,0 +1,117 @@
+body, html {
+     margin: 0;
+    padding: 0;
+    background-color: #5EC1F7;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+.parallax-container {
+    position: relative;
+    height: 100vh; /* Adjust if you want the parallax effect to span a different height */
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Arco';
+    src: url('ARCO.ttf') format('truetype'); /* Correct format value and add semicolon */
+    font-weight: 400;
+    font-style: normal;
+}
+
+.parallax-layer {
+    position: fixed; /* Fixed position to stay in place on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Fixed to viewport height */
+    background-size: cover;
+    background-position: center;
+    pointer-events: none; /* Ensures clicks pass through to content below */
+}
+
+#image1 {
+    background-image: url('Element1.png');
+	transition: filter 0.1s;
+
+}
+
+#animation1 {
+	animation: floatAnimation 3s ease-in-out infinite;
+	z-index: 3;
+}
+
+#cloud11 {
+    background-image: url('Cloud1-1.png');
+	transition: filter 0.1s;
+    z-index: 2;
+}
+
+#cloud12 {
+    background-image: url('Cloud1-2.png');
+	transition: filter 0.1s;
+    z-index: 2;
+}
+
+#cloud21 {
+    background-image: url('Cloud2-1.png');
+	transition: filter 0.1s;
+    z-index: 1;
+}
+
+#cloud22 {
+    background-image: url('Cloud2-2.png');
+	transition: filter 0.1s;
+    z-index: 1;
+}
+
+#cloud31 {
+    background-image: url('Cloud3-1.png');
+	transition: filter 0.1s;
+    z-index: 0;
+}
+
+#cloud32 {
+    background-image: url('Cloud3-2.png');
+	transition: filter 0.1s;
+    z-index: 0;
+}
+
+#image3 {
+    background-image: url('Element3.png');
+    z-index: 5;
+}
+
+#image4 {
+    background-image: url('Element4.png');
+    z-index: 6;
+}
+
+#image5 {
+    background-image: url('Element5.png');
+    z-index: 3;
+}
+
+.float-animation {
+    animation: floatAnimation 3s infinite ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-50px); }
+}
+.content {
+    position: relative;
+    z-index: 10; /* Higher z-index to ensure content is on top */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height, adjust as needed */
+    padding: 0; /* Adjust padding as needed, removed for centering */
+}
+
+.tagline {
+    font-family: 'Arco', sans-serif; /* Apply the "Arco" font */
+    font-size: 48px; /* Choose your desired font size */
+    color: #FFFFFF; /* Choose your desired text color */
+    z-index: 10; /* Ensure it's on top of other elements */
+    text-align: center; /* Center text horizontally */
+}
