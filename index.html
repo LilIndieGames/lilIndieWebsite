@@ -3,32 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>lil Indie Games</title>
+    <title>lil indie games</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Risque&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="LIG logo.png" alt="lil indie games">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#games">GAMES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-<div class="parallax-container">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch">LIL <span class="highlight">INDIE</span> GAMES</h1>
+            </div>
+            <p class="tagline">small studio. <span class="chaos">BIG CHAOS.</span></p>
+            <div class="scroll-indicator">
+                <span>scroll</span>
+                <div class="arrow"></div>
+            </div>
+        </div>
+        <div class="noise"></div>
+    </section>
 
-<div class="parallax-layer" id="animation1">
-<div class="parallax-layer" id="image1" data-depth="7"></div>
-</div>
-<div class="parallax-layer" id="image3" data-depth="6"></div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">// WHO WE ARE</span>
+                <h2>WE MAKE GAMES<br>THAT <span class="strike">DON'T</span> SUCK</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">Just two brothers making games.</p>
+                    <p>Born from late nights, organic coffee, and an unhealthy obsession with making games.</p>
+                    <p>We believe games should be fun first, everything else second.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">GAMES IN DEV</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">INDIE SPIRIT</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">LOOT BOXES</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tape tape-1">INDIE GAMES</div>
+        <div class="tape tape-2">MADE WITH CHAOS</div>
+    </section>
 
-<div class="parallax-layer" id="cloud11" data-depth="1" data-depth-x="4"></div>
-<div class="parallax-layer" id="cloud12" data-depth="1" data-depth-x="-4"></div>
+    <section id="games" class="games">
+        <div class="sky-bg"></div>
+        <div class="comet-container" id="cometContainer"></div>
+        <div class="container">
+            <div class="section-header game-header">
+                <h2>OUR GAME</h2>
+            </div>
+            <div class="game-showcase-punk">
+                <div class="capsule-wrapper">
+                    <div class="capsule-frame">
+                        <img src="PartyShips_Capsule.png" alt="Party Ships" class="capsule-art">
+                    </div>
+                </div>
+                <div class="game-info-punk">
+                    <h3 class="game-title-punk">PARTY SHIPS</h3>
+                    <p class="game-desc">Our first title. Currently in development. We're taking our time to make it right.</p>
+                    <div class="status-raw">
+                        <span class="status-dot"></span>
+                        <span>IN DEVELOPMENT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scanlines"></div>
+    </section>
 
-<div class="parallax-layer" id="cloud21" data-depth="-0.5" data-depth-x="3"></div>
-<div class="parallax-layer" id="cloud22" data-depth="-0.5" data-depth-x="-3"></div>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">// GET IN TOUCH</span>
+                <h2>SAY HI<br>OR WHATEVER</h2>
+            </div>
+            <div class="contact-content">
+                <p>Got questions? Ideas? Just want to tell us our games are cool (or not)?</p>
+                <a href="mailto:admin@lilindiegames.com" class="email-link">admin@lilindiegames.com</a>
+            </div>
+        </div>
+    </section>
 
-<div class="parallax-layer" id="cloud31" data-depth="-2" data-depth-x="2"></div>
-<div class="parallax-layer" id="cloud32" data-depth="-2" data-depth-x="-2"></div>
-</div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <span class="copyright">&copy; 2025 LIL INDIE GAMES</span>
+            </div>
+            <div class="birbs-motif">made with love for the birbs</div>
+        </div>
+    </footer>
 
-<div class="content">
-    <div class="tagline">LIL GAMES, BIG IMPACT.</div>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
