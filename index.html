@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lil indie games</title>
+    <title>lil indie games &lt;&lt; small studio, big chaos &gt;&gt;</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Risque&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Darumadrop+One&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- ===== TOP TICKER ===== -->
+    <div class="ticker" id="topTicker">
+        <div class="ticker__track">
+            <span>LIL INDIE GAMES&nbsp;&nbsp;&middot;&nbsp;&nbsp;SMALL STUDIO / BIG CHAOS&nbsp;&nbsp;&middot;&nbsp;&nbsp;NOW IN DEVELOPMENT: PARTY SHIPS&nbsp;&nbsp;&middot;&nbsp;&nbsp;EST. 2025&nbsp;&nbsp;&middot;&nbsp;&nbsp;GAMES THAT STAND OUT&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+            <span>LIL INDIE GAMES&nbsp;&nbsp;&middot;&nbsp;&nbsp;SMALL STUDIO / BIG CHAOS&nbsp;&nbsp;&middot;&nbsp;&nbsp;NOW IN DEVELOPMENT: PARTY SHIPS&nbsp;&nbsp;&middot;&nbsp;&nbsp;EST. 2025&nbsp;&nbsp;&middot;&nbsp;&nbsp;GAMES THAT STAND OUT&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span>
+        </div>
+    </div>
+
+    <!-- ===== NAV ===== -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#top" class="logo">
                 <img src="LIG logo.png" alt="lil indie games">
             </a>
             <ul class="nav-links">
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#games">GAMES</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#about"><span class="nav-num">01</span> ABOUT</a></li>
+                <li><a href="#games"><span class="nav-num">02</span> GAMES</a></li>
+                <li><a href="#contact"><span class="nav-num">03</span> CONTACT</a></li>
             </ul>
-            <div class="burger">
+            <div class="burger" aria-label="menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -28,97 +38,74 @@
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <div class="glitch-wrapper">
-                <h1 class="glitch">LIL <span class="highlight">INDIE</span> GAMES</h1>
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="top">
+        <div class="hero__grid">
+            <div class="hero__main">
+                <h1 class="hero__title">
+                    <span class="ln ln--lil">LIL</span>
+                    <span class="ln ln--indie">INDIE</span>
+                    <span class="ln ln--games">GAMES</span>
+                </h1>
+                <p class="hero__tag">small&nbsp;studio<span class="dot">.</span> <b class="chaos">BIG&nbsp;CHAOS<span class="dot">.</span></b></p>
             </div>
-            <p class="tagline">small studio. <span class="chaos">BIG CHAOS.</span></p>
-            <div class="scroll-indicator">
-                <span>scroll</span>
-                <div class="arrow"></div>
+            <aside class="hero__panel">
+                <p class="hero__blurb">Two brothers, one messy desk, and a stubborn belief that games should be fun before anything else.</p>
+                <a class="hero__cta" href="#games">See what we're making →</a>
+            </aside>
+        </div>
+    </header>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="about section">
+        <div class="section__tab">01 &mdash; ABOUT</div>
+        <div class="about__wrap">
+            <div class="about__box about__box--main">
+                <h2 class="head">WE MAKE GAMES<br><span class="head__alt">THAT STAND OUT</span></h2>
+                <p class="lead">Just two brothers making games.</p>
+                <p>We make the kind of games we actually want to play &mdash; loud, silly, best with friends on the same couch. <mark>Fun first.</mark> Everything else second.</p>
             </div>
         </div>
-        <div class="noise"></div>
     </section>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="label">// WHO WE ARE</span>
-                <h2>WE MAKE GAMES<br>THAT STAND OUT</h2>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">Just two brothers making games.</p>
-                    <p>Born from late nights, organic coffee, and an unhealthy obsession with making games.</p>
-                    <p>We believe games should be fun first, everything else second.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">1</span>
-                        <span class="stat-label">GAMES IN DEV</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">INDIE SPIRIT</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">0</span>
-                        <span class="stat-label">LOOT BOXES</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="tape tape-1">INDIE GAMES</div>
-        <div class="tape tape-2">MADE WITH CHAOS</div>
-    </section>
-
-    <section id="games" class="games">
+    <!-- ===== GAMES ===== -->
+    <section id="games" class="games section">
         <div class="sky-bg"></div>
         <div class="comet-container" id="cometContainer"></div>
-        <div class="container">
-            <div class="section-header game-header">
-                <h2>OUR GAME</h2>
+        <div class="section__tab section__tab--light">02 &mdash; GAMES</div>
+        <div class="games__inner">
+            <img src="PartyShips_Capsule.png" alt="Party Ships" class="game__img">
+            <p class="game__desc">Grab a controller, grab a friend. Chaotic couch multiplayer set in space &mdash; bump, blast and body-check your mates off the screen.</p>
+            <div class="game__meta">
+                <span class="tag">2&ndash;4 players</span>
+                <span class="tag">couch co-op</span>
+                <span class="tag">in space</span>
             </div>
-            <div class="game-showcase-punk">
-                <div class="capsule-wrapper">
-                    <div class="capsule-frame">
-                        <img src="PartyShips_Capsule.png" alt="Party Ships" class="capsule-art">
-                    </div>
-                </div>
-                <div class="game-info-punk">
-                    <h3 class="game-title-punk">PARTY SHIPS</h3>
-                    <p class="game-desc">Our first title. Currently in development. We're taking our time to make it right.</p>
-                    <div class="status-raw">
-                        <span class="status-dot"></span>
-                        <span>IN DEVELOPMENT</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scanlines"></div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="label">// GET IN TOUCH</span>
-                <h2>SAY HI<br>OR WHATEVER</h2>
-            </div>
-            <div class="contact-content">
-                <p>Got questions? Ideas? Just want to tell us our games are cool (or not)?</p>
-                <a href="mailto:admin@lilindiegames.com" class="email-link">admin@lilindiegames.com</a>
-            </div>
+            <p class="game__status">Currently in development. It'll be done when it's fun.</p>
         </div>
     </section>
 
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="contact section">
+        <div class="section__tab">03 &mdash; CONTACT</div>
+        <div class="contact__wrap">
+            <h2 class="head">SAY HI<br><span class="head__alt">OR WHATEVER</span></h2>
+            <p class="contact__lead">Questions, press, or just want to say hey? A real person reads it.</p>
+            <a href="mailto:admin@lilindiegames.com" class="mail">
+                <span class="mail__label">email us</span>
+                <span class="mail__addr">admin@lilindiegames.com</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <span class="copyright">&copy; 2025 LIL INDIE GAMES</span>
-            </div>
-            <div class="birbs-motif">made with love for the birbs</div>
+        <div class="footer__txt">
+            <span>&copy; 2025 LIL INDIE GAMES</span>
+        </div>
+        <div class="footer__links">
+            <a href="PrivacyPolicy.html">PRIVACY</a>
+            <a href="mailto:admin@lilindiegames.com">CONTACT</a>
         </div>
     </footer>
 
