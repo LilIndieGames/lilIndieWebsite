@@ -1,13 +1,13 @@
 /* =====================================================
    LIL INDIE GAMES
-   Restrained studio site — big art, confident type, space.
+   Restrained studio site. Big art, confident type, space.
    One signature colour (hanko vermilion). No decoration.
    ===================================================== */
 
 :root {
-    --shu: #e5361d;         /* vermilion — the one accent */
+    --shu: #e5361d;         /* vermilion, the one accent */
     --ink: #1a1714;         /* near-black text */
-    --black: #000000;       /* true black — dark panels */
+    --black: #000000;       /* true black, dark panels */
     --paper: #f4efe6;       /* warm off-white */
     --paper-2: #eae3d6;     /* slightly deeper panel */
     --muted: #7a7268;       /* muted text */
@@ -33,28 +33,7 @@ a { color: inherit; }
 .wrap { max-width: 1140px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
 
 /* =====================================================
-   TICKER — one, quiet, no border stack
-   ===================================================== */
-.ticker {
-    background: var(--black);
-    color: var(--paper);
-    overflow: hidden;
-    white-space: nowrap;
-}
-.ticker__track {
-    display: inline-flex;
-    animation: marquee 45s linear infinite;
-    font-size: 0.8rem;
-    letter-spacing: 0.03em;
-    padding: 0.55rem 0;
-}
-@keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
-}
-
-/* =====================================================
-   NAV — plain, no dividing cells or seals
+   NAV: plain, no dividing cells or seals
    ===================================================== */
 .navbar {
     position: sticky;
@@ -90,7 +69,7 @@ a { color: inherit; }
 .burger span { width: 26px; height: 2px; background: var(--ink); transition: all 0.2s; }
 
 /* =====================================================
-   HERO — big type, lots of air, no side panel chrome
+   HERO: big type, lots of air, no side panel chrome
    ===================================================== */
 .hero { padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2.5rem, 5vw, 4rem); }
 .hero__grid { max-width: 1140px; margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 2.5rem); }
@@ -134,7 +113,7 @@ a { color: inherit; }
 .hero__cta:hover { opacity: 0.65; }
 
 /* =====================================================
-   SECTIONS — quiet label, generous spacing
+   SECTIONS: quiet label, generous spacing
    ===================================================== */
 .section { padding: clamp(3.5rem, 9vw, 7rem) 0; }
 .about { border-top: 1px solid var(--line); }
@@ -161,7 +140,7 @@ a { color: inherit; }
 mark { background: transparent; color: var(--shu); padding: 0; font-weight: inherit; }
 
 /* =====================================================
-   ABOUT — single column of prose
+   ABOUT: single column of prose
    ===================================================== */
 .about__wrap {
     max-width: 760px;
@@ -180,7 +159,7 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
 .about__box--main p { max-width: 56ch; color: var(--ink); }
 
 /* =====================================================
-   GAMES — this is where the art carries everything
+   GAMES: this is where the art carries everything
    ===================================================== */
 .games {
     position: relative;
@@ -241,7 +220,7 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
 }
 
 /* =====================================================
-   CONTACT — simple, real
+   CONTACT: simple, real
    ===================================================== */
 .contact__wrap {
     max-width: 720px;
@@ -274,7 +253,7 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
 .mail:hover .mail__addr { border-color: var(--shu); }
 
 /* =====================================================
-   FOOTER — plain line of text
+   FOOTER: plain line of text
    ===================================================== */
 .footer {
     border-top: 1px solid var(--line);
@@ -301,10 +280,109 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
 .footer__links a:hover { color: var(--shu); }
 
 /* =====================================================
+   PAX: events landing page (pax.html)
+   ===================================================== */
+.pax { border-top: 1px solid var(--line); }
+.pax__wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    text-align: center;
+}
+.pax__wrap .section__tab { margin-bottom: 1.4rem; }
+.pax__head { margin-bottom: 1.2rem; }
+.pax__lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 46ch;
+    margin: 0 auto clamp(2.5rem, 6vw, 4rem);
+    color: var(--ink);
+}
+
+.pax__booths {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+    margin-bottom: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+/* A single booth = label, clickable banner, and a wishlist button */
+.booth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--ink);
+}
+.booth__label {
+    font-family: 'Bungee', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.95rem, 2vw, 1.35rem);
+    line-height: 1.15;
+    letter-spacing: 0.01em;
+    transition: color 0.18s ease;
+}
+.booth__link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
+.booth__banner {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid var(--line);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.booth:hover .booth__banner {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+.booth:hover .booth__label { color: var(--shu); }
+
+/* Wishlist on Steam button */
+.steam-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-top: 0.4rem;
+    background: var(--black);
+    color: var(--paper);
+    text-decoration: none;
+    padding: 0.7rem 1.4rem;
+    border-radius: 999px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.steam-btn:hover { transform: translateY(-2px); opacity: 0.92; }
+.steam-btn__icon { display: flex; }
+.steam-btn__txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.05;
+    text-align: left;
+}
+.steam-btn__small {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+}
+.steam-btn__big {
+    font-family: 'Bungee', sans-serif;
+    font-weight: 400;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+}
+
+/* =====================================================
    RESPONSIVE
    ===================================================== */
 @media (max-width: 860px) {
     .about__wrap { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+    .pax__booths { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 620px) {
