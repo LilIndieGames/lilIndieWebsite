@@ -299,20 +299,52 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
     color: var(--ink);
 }
 
+/* article-style intro/outro copy */
+.pax__intro {
+    max-width: 60ch;
+    margin: 0 auto clamp(2.5rem, 6vw, 3.5rem);
+    text-align: left;
+}
+.pax__intro p {
+    font-size: 1.08rem;
+    line-height: 1.75;
+    color: var(--ink);
+}
+.pax__intro p + p { margin-top: 1rem; }
+.pax__outro {
+    max-width: 52ch;
+    margin: 0 auto;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
 .pax__booths {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: stretch;
+    gap: clamp(1.5rem, 4vw, 2rem);
     margin-bottom: clamp(2.5rem, 6vw, 3.5rem);
+    text-align: left;
 }
 
-/* A single booth = label, clickable banner, and a wishlist button */
+/* A single booth = soft panel with label, clickable banner, and a wishlist button */
 .booth {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.9rem;
+    gap: 1.1rem;
+    height: 100%;
     color: var(--ink);
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: clamp(1.3rem, 3vw, 1.8rem);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.booth:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 .booth__label {
     font-family: 'Bungee', sans-serif;
@@ -320,6 +352,12 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
     font-size: clamp(0.95rem, 2vw, 1.35rem);
     line-height: 1.15;
     letter-spacing: 0.01em;
+    text-align: center;
+    align-self: stretch;
+    min-height: 3.4em;         /* reserves room for a two-line title so cards align */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     transition: color 0.18s ease;
 }
 .booth__link {
@@ -330,14 +368,15 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
 }
 .booth__banner {
     width: 100%;
-    border-radius: 4px;
+    aspect-ratio: 460 / 215;
+    object-fit: cover;
+    border-radius: 6px;
     border: 1px solid var(--line);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
     transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
-.booth:hover .booth__banner {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-}
+/* push the wishlist button to the bottom so buttons line up across cards */
+.booth .steam-btn { margin-top: auto; }
 .booth:hover .booth__label { color: var(--shu); }
 
 /* Wishlist on Steam button */
@@ -375,10 +414,122 @@ mark { background: transparent; color: var(--shu); padding: 0; font-weight: inhe
 }
 
 /* =====================================================
+   STORE: link-tree of Steam pages, Steam-dark panel
+   ===================================================== */
+.store {
+    background: #1b2838;            /* steam dark slate */
+    color: var(--paper);
+    border-top: 1px solid var(--line);
+    padding: clamp(3.5rem, 9vw, 6.5rem) 0;
+}
+.store__wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    text-align: center;
+}
+.store__wrap .section__tab { color: #8aa5bd; margin-bottom: 1.4rem; }
+.store__head { margin-bottom: 1rem; }
+.store__head .head__alt { color: #66c0f4; }
+.store__lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    max-width: 44ch;
+    margin: 0 auto clamp(2.5rem, 6vw, 3.5rem);
+    color: #c7d5e0;
+}
+
+/* stacked link-tree list */
+.store__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+}
+
+/* one row = thumbnail + text + wishlist button */
+.slink {
+    display: grid;
+    grid-template-columns: 168px 1fr auto;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.9rem;
+    background: #223044;
+    border: 1px solid #2f4257;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--paper);
+    transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+}
+.slink:hover {
+    transform: translateY(-3px);
+    background: #263751;
+    border-color: #66c0f4;
+}
+.slink__thumb {
+    width: 100%;
+    aspect-ratio: 460 / 215;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+}
+.slink__body { min-width: 0; }
+.slink__studio {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8aa5bd;
+}
+.slink__title {
+    font-family: 'Bungee', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+    line-height: 1.1;
+    margin: 0.2rem 0 0.35rem;
+    color: var(--paper);
+}
+.slink__desc {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #c7d5e0;
+    max-width: 42ch;
+}
+
+/* pill button living inside a row, reuses steam-btn markup */
+.slink .steam-btn {
+    margin-top: 0;
+    background: #66c0f4;    /* steam blue */
+    color: #14212e;
+    flex-shrink: 0;
+    pointer-events: none;   /* whole row is the link */
+}
+.slink:hover .steam-btn { opacity: 1; background: #7fd0ff; }
+
+.store__note {
+    margin-top: clamp(2rem, 5vw, 2.8rem);
+    font-size: 0.9rem;
+    color: #8aa5bd;
+}
+.store__note a { color: #66c0f4; border-bottom: 1px solid #66c0f4; text-decoration: none; }
+
+/* =====================================================
    RESPONSIVE
    ===================================================== */
 @media (max-width: 860px) {
     .about__wrap { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 620px) {
+    .slink {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 0.9rem;
+        padding: 1.1rem;
+    }
+    .slink__thumb { max-width: 320px; }
+    .slink__desc { margin: 0 auto; }
+    .slink .steam-btn { width: auto; }
 }
 
 @media (max-width: 560px) {
