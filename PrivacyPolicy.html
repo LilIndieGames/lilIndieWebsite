@@ -1,13 +1,30 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &middot; lil indie games</title>
+<meta name="description" content="Privacy policy.">
+<meta property="og:title" content="Privacy Policy &middot; lil indie games">
+<meta property="og:description" content="Privacy policy.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lilindiegames.com/PrivacyPolicy.html">
+<meta property="og:image" content="https://lilindiegames.com/assets/PartyShips_KeyArt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Outfit:wght@400;500;600;700;800&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
-
-    <h1>Privacy Policy</h1>
+<div class="bar" id="top"><div class="wrap">
+  <a class="brand" href="index.html#top"><img src="assets/lig_white.png" alt="Lil Indie Games"></a>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <nav id="menu"><a href="index.html#about">About</a><a href="index.html#games">Games</a><a href="index.html#contact">Contact</a><a href="pax.html">PAX</a><a href="presskit/index.html">Press kit</a></nav>
+</div></div>
+<section class="sec"><div class="wrap"><div class="prose">
+<h1>Privacy Policy</h1>
 
     <p><strong>App Name</strong> ("we," "our," or "us") operates the <strong>App Name</strong> mobile application (the "App"). This privacy policy explains how we collect, use, and share information about you when you use our App.</p>
 
@@ -58,6 +75,12 @@
     <p>If you have any questions about this privacy policy, please contact us at:</p>
 
     <p><strong>Email</strong>: appslilindiegames@gmail.com <br>
-
+</div></div></section>
+<footer class="foot"><div class="wrap">
+  <img src="assets/lig_white.png" alt="Lil Indie Games">
+  <span class="fine">&copy; 2026 Lil Indie Games &middot; Lil Indie Pty Ltd &middot; Melbourne, Australia</span>
+  <div class="links"><a href="index.html">Home</a><a href="pax.html">PAX</a><a href="presskit/index.html">Press kit</a><a href="PrivacyPolicy.html">Privacy</a><a href="mailto:admin@lilindiegames.com">Contact</a></div>
+</div></footer>
+<script>document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});</script>
 </body>
 </html>

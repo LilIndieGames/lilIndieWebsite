@@ -1,111 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lil indie games &lt;&lt; we're at PAX &gt;&gt;</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Darumadrop+One&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lil indie games &lt;&lt; we're at PAX &gt;&gt;</title>
+<meta name="description" content="2 indies, 1 booth. Come and play Party Ships at PAX.">
+<meta property="og:title" content="lil indie games &lt;&lt; we're at PAX &gt;&gt;">
+<meta property="og:description" content="2 indies, 1 booth. Come and play Party Ships at PAX.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lilindiegames.com/pax.html">
+<meta property="og:image" content="https://lilindiegames.com/assets/PartyShips_PaxBanner.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Outfit:wght@400;500;600;700;800&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<div class="bar" id="top"><div class="wrap">
+  <a class="brand" href="index.html#top"><img src="assets/lig_white.png" alt="Lil Indie Games"></a>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <nav id="menu"><a href="index.html#about">About</a><a href="index.html#games">Games</a><a href="index.html#contact">Contact</a><a href="pax.html">PAX</a><a href="presskit/index.html">Press kit</a></nav>
+</div></div>
 
-    <!-- ===== NAV ===== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html#top" class="logo">
-                <img src="LIG logo.png" alt="lil indie games">
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#about"><span class="nav-num">01</span> ABOUT</a></li>
-                <li><a href="index.html#games"><span class="nav-num">02</span> GAMES</a></li>
-                <li><a href="index.html#contact"><span class="nav-num">03</span> CONTACT</a></li>
-            </ul>
-            <div class="burger" aria-label="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ===== PAX ===== -->
-    <section class="pax section">
-        <div class="pax__wrap">
-            <div class="section__tab">EVENTS / PAX</div>
-            <h1 class="head pax__head">SEE US AT PAX<br></h1>
-            <p class="pax__lead">2 indies, 1 booth, come check us both out!</p>
-
-            <div class="pax__intro">
-                <p>We're teaming up with our pal at Zarktor Studios to share a booth, two indie teams bringing their games to the show floor. Come say hi, grab a controller, and play something before anyone else does.</p>
-                <p>Here's what you'll find at the booth. Give either a wishlist on Steam to follow along.</p>
-            </div>
-
-            <div class="pax__booths">
-                <!-- LIL INDIE / PARTY SHIPS -->
-                <div class="booth">
-                    <span class="booth__label">
-                        LIL INDIE<br><h1>PARTY SHIPS</h1>
-                    </span>
-                    <a class="booth__link" href="https://store.steampowered.com/app/4868510/Party_Ships/" target="_blank" rel="noopener">
-                        <img class="booth__banner" src="PartyShips_PaxBanner.png" alt="Party Ships">
-                    </a>
-                    <a class="steam-btn" href="https://store.steampowered.com/app/4868510/Party_Ships/" target="_blank" rel="noopener">
-                        <span class="steam-btn__icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="Steam">
-                                <circle cx="16" cy="16" r="16" fill="#fff"/>
-                                <path fill="#1a1714" d="M16 5.5c-5.4 0-9.9 4.1-10.4 9.4l5.6 2.3c.5-.3 1-.5 1.6-.5h.2l2.5-3.6v-.1c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4h-.1l-3.5 2.5v.1c0 1.7-1.4 3-3 3-1.5 0-2.7-1-3-2.4L5.9 18C7.1 22.5 11.2 25.8 16 25.8c5.7 0 10.4-4.6 10.4-10.4S21.7 5.5 16 5.5z"/>
-                                <path fill="#1a1714" d="M11.9 22.1l-1.3-.5c.2.5.7.9 1.2 1.1.9.4 2-.1 2.4-1 .2-.5.2-1 0-1.5s-.6-.8-1-1c-.5-.2-1-.2-1.4 0l1.3.5c.7.3 1 1 .7 1.7-.3.6-1.1.9-1.8.6zM21.4 13.2c0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7 1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7zm-4.7 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
-                            </svg>
-                        </span>
-                        <span class="steam-btn__txt">
-                            <span class="steam-btn__small">WISHLIST ON</span>
-                            <span class="steam-btn__big">STEAM</span>
-                        </span>
-                    </a>
-                </div>
-
-                <!-- ZARKTOR STUDIOS / ZARKTOR'S REALM -->
-                <div class="booth">
-                    <span class="booth__label">
-                        ZARKTOR STUDIOS<br><h1>ZARKTOR'S REALM</h1>
-                    </span>
-                    <a class="booth__link" href="https://store.steampowered.com/app/1665300/Zarktors_Realm/" target="_blank" rel="noopener">
-                        <img class="booth__banner" src="ZarktorsRealm_PaxBanner.jpg" alt="Zarktor's Realm">
-                    </a>
-                    <a class="steam-btn" href="https://store.steampowered.com/app/1665300/Zarktors_Realm/" target="_blank" rel="noopener">
-                        <span class="steam-btn__icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="Steam">
-                                <circle cx="16" cy="16" r="16" fill="#fff"/>
-                                <path fill="#1a1714" d="M16 5.5c-5.4 0-9.9 4.1-10.4 9.4l5.6 2.3c.5-.3 1-.5 1.6-.5h.2l2.5-3.6v-.1c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4h-.1l-3.5 2.5v.1c0 1.7-1.4 3-3 3-1.5 0-2.7-1-3-2.4L5.9 18C7.1 22.5 11.2 25.8 16 25.8c5.7 0 10.4-4.6 10.4-10.4S21.7 5.5 16 5.5z"/>
-                                <path fill="#1a1714" d="M11.9 22.1l-1.3-.5c.2.5.7.9 1.2 1.1.9.4 2-.1 2.4-1 .2-.5.2-1 0-1.5s-.6-.8-1-1c-.5-.2-1-.2-1.4 0l1.3.5c.7.3 1 1 .7 1.7-.3.6-1.1.9-1.8.6zM21.4 13.2c0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7 1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7zm-4.7 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/>
-                            </svg>
-                        </span>
-                        <span class="steam-btn__txt">
-                            <span class="steam-btn__small">WISHLIST ON</span>
-                            <span class="steam-btn__big">STEAM</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-
-            <p class="pax__outro">Not making it to the show? A wishlist still helps us out more than you'd think.</p>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer__txt">
-            <span>&copy; 2025 LIL INDIE GAMES</span>
-        </div>
-        <div class="footer__links">
-            <a href="index.html">HOME</a>
-            <a href="PrivacyPolicy.html">PRIVACY</a>
-            <a href="mailto:admin@lilindiegames.com">CONTACT</a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<section class="sec"><div class="wrap">
+  <div class="sec__head"><div><div class="sect">Events / PAX</div><div class="rib "><span>See us at PAX</span></div></div></div>
+  <p class="shout" style="font-size:clamp(22px,3vw,36px);">2 indies, 1 booth, <span>come check us both out!</span></p>
+  <div class="prose" style="margin-top:24px;">
+    <p>We're teaming up with our pal at Zarktor Studios to share a booth, two indie teams bringing their games to the show floor. Come say hi, grab a controller, and play something before anyone else does.</p>
+    <p>Here's what you'll find at the booth. Give either a wishlist on Steam to follow along.</p>
+  </div>
+  <div class="grid g2" style="margin-top:44px;gap:clamp(30px,5vw,60px);">
+    <div class="booth">
+      <div class="kicker">Lil Indie</div><h2>Party Ships</h2>
+      <a class="banner" href="https://store.steampowered.com/app/4868510/Party_Ships/" target="_blank" rel="noopener" style="display:block;"><img src="assets/PartyShips_PaxBanner.jpg" alt="Party Ships" loading="lazy"></a>
+      <a class="btn y" href="https://store.steampowered.com/app/4868510/Party_Ships/" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" role="img" aria-label="Steam"><circle cx="16" cy="16" r="16" fill="#fff"/><path fill="#1a1714" d="M16 5.5c-5.4 0-9.9 4.1-10.4 9.4l5.6 2.3c.5-.3 1-.5 1.6-.5h.2l2.5-3.6v-.1c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4h-.1l-3.5 2.5v.1c0 1.7-1.4 3-3 3-1.5 0-2.7-1-3-2.4L5.9 18C7.1 22.5 11.2 25.8 16 25.8c5.7 0 10.4-4.6 10.4-10.4S21.7 5.5 16 5.5z"/><path fill="#1a1714" d="M11.9 22.1l-1.3-.5c.2.5.7.9 1.2 1.1.9.4 2-.1 2.4-1 .2-.5.2-1 0-1.5s-.6-.8-1-1c-.5-.2-1-.2-1.4 0l1.3.5c.7.3 1 1 .7 1.7-.3.6-1.1.9-1.8.6zM21.4 13.2c0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7 1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7zm-4.7 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/></svg> Wishlist on Steam</a>
+    </div>
+    <div class="booth">
+      <div class="kicker">Zarktor Studios</div><h2>Zarktor's Realm</h2>
+      <a class="banner" href="https://store.steampowered.com/app/1665300/Zarktors_Realm/" target="_blank" rel="noopener" style="display:block;"><img src="assets/ZarktorsRealm_PaxBanner.jpg" alt="Zarktor's Realm" loading="lazy"></a>
+      <a class="btn y" href="https://store.steampowered.com/app/1665300/Zarktors_Realm/" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" role="img" aria-label="Steam"><circle cx="16" cy="16" r="16" fill="#fff"/><path fill="#1a1714" d="M16 5.5c-5.4 0-9.9 4.1-10.4 9.4l5.6 2.3c.5-.3 1-.5 1.6-.5h.2l2.5-3.6v-.1c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4h-.1l-3.5 2.5v.1c0 1.7-1.4 3-3 3-1.5 0-2.7-1-3-2.4L5.9 18C7.1 22.5 11.2 25.8 16 25.8c5.7 0 10.4-4.6 10.4-10.4S21.7 5.5 16 5.5z"/><path fill="#1a1714" d="M11.9 22.1l-1.3-.5c.2.5.7.9 1.2 1.1.9.4 2-.1 2.4-1 .2-.5.2-1 0-1.5s-.6-.8-1-1c-.5-.2-1-.2-1.4 0l1.3.5c.7.3 1 1 .7 1.7-.3.6-1.1.9-1.8.6zM21.4 13.2c0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7 1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7zm-4.7 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/></svg> Wishlist on Steam</a>
+    </div>
+  </div>
+  <p class="lead" style="margin-top:50px;">Not making it to the show? A wishlist still helps us out more than you'd think.</p>
+</div></section>
+<footer class="foot"><div class="wrap">
+  <img src="assets/lig_white.png" alt="Lil Indie Games">
+  <span class="fine">&copy; 2026 Lil Indie Games &middot; Lil Indie Pty Ltd &middot; Melbourne, Australia</span>
+  <div class="links"><a href="index.html">Home</a><a href="pax.html">PAX</a><a href="presskit/index.html">Press kit</a><a href="PrivacyPolicy.html">Privacy</a><a href="mailto:admin@lilindiegames.com">Contact</a></div>
+</div></footer>
+<script>document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});</script>
 </body>
 </html>

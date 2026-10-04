@@ -1,108 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lil indie games &lt;&lt; small studio, big chaos &gt;&gt;</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Darumadrop+One&family=Rampart+One&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lil indie games &lt;&lt; small studio, big chaos &gt;&gt;</title>
+<meta name="description" content="Two brothers, one messy desk, and a stubborn belief that games should be fun before anything else.">
+<meta property="og:title" content="lil indie games &lt;&lt; small studio, big chaos &gt;&gt;">
+<meta property="og:description" content="Two brothers, one messy desk, and a stubborn belief that games should be fun before anything else.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lilindiegames.com">
+<meta property="og:image" content="https://lilindiegames.com/assets/PartyShips_KeyArt.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gasoek+One&family=Outfit:wght@400;500;600;700;800&family=Unbounded:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
+<div class="bar" id="top"><div class="wrap">
+  <a class="brand" href="index.html#top"><img src="assets/lig_white.png" alt="Lil Indie Games"></a>
+  <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <nav id="menu"><a href="index.html#about">About</a><a href="index.html#games">Games</a><a href="index.html#contact">Contact</a><a href="pax.html">PAX</a><a href="presskit/index.html">Press kit</a></nav>
+</div></div>
 
-    <!-- ===== NAV ===== -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#top" class="logo">
-                <img src="LIG logo.png" alt="lil indie games">
-            </a>
-            <ul class="nav-links">
-                <li><a href="#about"><span class="nav-num">01</span> ABOUT</a></li>
-                <li><a href="#games"><span class="nav-num">02</span> GAMES</a></li>
-                <li><a href="#contact"><span class="nav-num">03</span> CONTACT</a></li>
-                <li><a href="pax.html"><span class="nav-num">04</span> PAX</a></li>
-            </ul>
-            <div class="burger" aria-label="menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+<header class="hero on-dark">
+  <div class="wrap">
+    <div class="hero__grid" style="--cols:minmax(0,1.35fr) minmax(0,1fr);">
+      <h1 class="mega"><span class="a">Lil</span><span class="b">Indie</span><span class="c">Games</span></h1>
+      <div>
+        <p class="display" style="font-size:clamp(17px,2vw,24px);line-height:1.25;">small studio. <span style="color:var(--yellow);">Big chaos.</span></p>
+        <p class="pitch" style="margin-top:16px;">Two brothers, one messy desk, and a stubborn belief that games should be fun before anything else.</p>
+        <div class="hero__btns"><a class="btn y" href="#games">See what we're making <svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      </div>
+    </div>
+  </div>
+</header>
 
-    <!-- ===== HERO ===== -->
-    <header class="hero" id="top">
-        <div class="hero__grid">
-            <div class="hero__main">
-                <h1 class="hero__title">
-                    <span class="ln ln--lil">LIL</span>
-                    <span class="ln ln--indie">INDIE</span>
-                    <span class="ln ln--games">GAMES</span>
-                </h1>
-                <p class="hero__tag">small&nbsp;studio<span class="dot">.</span> <b class="chaos">BIG&nbsp;CHAOS<span class="dot">.</span></b></p>
-            </div>
-            <aside class="hero__panel">
-                <p class="hero__blurb">Two brothers, one messy desk, and a stubborn belief that games should be fun before anything else.</p>
-                <a class="hero__cta" href="#games">See what we're making →</a>
-            </aside>
-        </div>
-    </header>
+<section class="sec" id="about"><div class="wrap">
+  <div class="sec__head"><div><div class="sect">01 / About</div><div class="rib "><span>About</span></div></div></div>
+  <div class="split" style="--cols:minmax(0,1.2fr) minmax(0,1fr);">
+    <div>
+      <h2 class="shout">We make games<br><span>that stand out</span></h2>
+      <p class="lead" style="margin-top:22px;"><b>Just two brothers making games.</b></p>
+      <p style="margin-top:12px;font-size:20px;">We make the kind of games we actually want to play. Loud, silly, best with friends on the same couch. <b style="background:var(--yellow);padding:0 6px;">Fun first.</b> Everything else second.</p>
+    </div>
+    <div style="position:relative;min-height:260px;">
+      <img src="assets/key/robo.png" alt="" style="position:absolute;width:52%;left:0;top:0;transform:rotate(-8deg);filter:drop-shadow(8px 10px 0 rgba(14,10,24,0.3));" loading="lazy">
+      <img src="assets/key/dino.png" alt="" style="position:absolute;width:56%;right:0;bottom:0;transform:rotate(6deg);filter:drop-shadow(8px 10px 0 rgba(14,10,24,0.3));" loading="lazy">
+    </div>
+  </div>
+</div></section>
 
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="about section">
-        <div class="section__tab">01 / ABOUT</div>
-        <div class="about__wrap">
-            <div class="about__box about__box--main">
-                <h2 class="head">WE MAKE GAMES<br><span class="head__alt">THAT STAND OUT</span></h2>
-                <p class="lead">Just two brothers making games.</p>
-                <p>We make the kind of games we actually want to play. Loud, silly, best with friends on the same couch. <mark>Fun first.</mark> Everything else second.</p>
-            </div>
-        </div>
-    </section>
+<section class="sec dark on-dark" id="games"><div class="dots behind"></div><div class="wrap">
+  <div class="sec__head"><div><div class="sect" style="color:var(--lime);">02 / Games</div><div class="rib yellow"><span>Games</span></div></div></div>
+  <div class="split">
+    <div>
+      <img src="assets/key/logo.png" alt="Party Ships" style="width:clamp(200px,24vw,300px);margin-left:-8px;">
+      <h2 class="display" style="font-size:clamp(22px,2.6vw,34px);line-height:1.08;margin-top:10px;text-shadow:3px 3px 0 var(--magenta);">The party brawler<br>that's secretly&nbsp;a<br><span style="color:var(--yellow);">physics sandbox.</span></h2>
+      <p class="pitch" style="font-size:20px;margin-top:18px;">Mix ridiculous items into <b>accidental synergies</b> and unleash them on your mates! Last one standing wins. <b>Simple... right?</b></p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;"><span class="tag y">1-4 players</span><span class="tag l">couch and online</span><span class="tag m">physics sandbox</span></div>
+      <p style="margin-top:18px;opacity:0.85;">Coming to PC in 2027.</p>
+      <div class="hero__btns"><a class="btn y" href="https://store.steampowered.com/app/4868510/Party_Ships/" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" role="img" aria-label="Steam"><circle cx="16" cy="16" r="16" fill="#fff"/><path fill="#1a1714" d="M16 5.5c-5.4 0-9.9 4.1-10.4 9.4l5.6 2.3c.5-.3 1-.5 1.6-.5h.2l2.5-3.6v-.1c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4h-.1l-3.5 2.5v.1c0 1.7-1.4 3-3 3-1.5 0-2.7-1-3-2.4L5.9 18C7.1 22.5 11.2 25.8 16 25.8c5.7 0 10.4-4.6 10.4-10.4S21.7 5.5 16 5.5z"/><path fill="#1a1714" d="M11.9 22.1l-1.3-.5c.2.5.7.9 1.2 1.1.9.4 2-.1 2.4-1 .2-.5.2-1 0-1.5s-.6-.8-1-1c-.5-.2-1-.2-1.4 0l1.3.5c.7.3 1 1 .7 1.7-.3.6-1.1.9-1.8.6zM21.4 13.2c0-1.5-1.2-2.7-2.7-2.7s-2.7 1.2-2.7 2.7 1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7zm-4.7 0c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2z"/></svg> Wishlist on Steam</a><a class="btn" href="presskit/index.html">Press kit <svg viewBox="0 0 24 24"><path d="M4 12h15M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+    <div>
+      <div class="frame"><video controls playsinline preload="none" poster="video/PartyShips_Trailer_poster.jpg"><source src="video/PartyShips_Trailer_720p.mp4" type="video/mp4"></video></div>
+      <div class="frame" style="margin-top:30px;"><img src="assets/PartyShips_KeyArt.jpg" alt="Party Ships" loading="lazy"></div>
+    </div>
+  </div>
+</div></section>
 
-    <!-- ===== GAMES ===== -->
-    <section id="games" class="games section">
-        <div class="sky-bg"></div>
-        <div class="comet-container" id="cometContainer"></div>
-        <div class="section__tab section__tab--light">02 / GAMES</div>
-        <div class="games__inner">
-            <img src="PartyShips_Capsule.png" alt="Party Ships" class="game__img">
-            <p class="game__desc">Grab a controller, grab a friend. Chaotic couch multiplayer set in space. Bump, blast and body-check your mates off the screen.</p>
-            <div class="game__meta">
-                <span class="tag">2-4 players</span>
-                <span class="tag">couch co-op</span>
-                <span class="tag">in space</span>
-            </div>
-            <p class="game__status">Currently in development. It'll be done when it's fun.</p>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="contact section">
-        <div class="section__tab">03 / CONTACT</div>
-        <div class="contact__wrap">
-            <h2 class="head">SAY HI<br><span class="head__alt">OR WHATEVER</span></h2>
-            <p class="contact__lead">Questions, press, or just want to say hey? A real person reads it.</p>
-            <a href="mailto:admin@lilindiegames.com" class="mail">
-                <span class="mail__label">email us</span>
-                <span class="mail__addr">admin@lilindiegames.com</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer__txt">
-            <span>&copy; 2025 LIL INDIE GAMES</span>
-        </div>
-        <div class="footer__links">
-            <a href="pax.html">PAX</a>
-            <a href="PrivacyPolicy.html">PRIVACY</a>
-            <a href="mailto:admin@lilindiegames.com">CONTACT</a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<section class="sec alt" id="contact"><div class="wrap">
+  <div class="sec__head"><div><div class="sect">03 / Contact</div><div class="rib lime"><span>Contact</span></div></div></div>
+  <h2 class="shout">Say hi<br><span>or whatever</span></h2>
+  <p class="lead" style="margin:22px 0 30px;">Questions, press, or just want to say hey? A real person reads it.</p>
+  <a class="mail" href="mailto:admin@lilindiegames.com"><span class="l">email us</span><span class="a">admin@lilindiegames.com</span></a>
+</div></section>
+<footer class="foot"><div class="wrap">
+  <img src="assets/lig_white.png" alt="Lil Indie Games">
+  <span class="fine">&copy; 2026 Lil Indie Games &middot; Lil Indie Pty Ltd &middot; Melbourne, Australia</span>
+  <div class="links"><a href="pax.html">PAX</a><a href="presskit/index.html">Press kit</a><a href="PrivacyPolicy.html">Privacy</a><a href="mailto:admin@lilindiegames.com">Contact</a></div>
+</div></footer>
+<script>document.querySelectorAll('#menu a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('menu').classList.remove('open');});});</script>
 </body>
 </html>
